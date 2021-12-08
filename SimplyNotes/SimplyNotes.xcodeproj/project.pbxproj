@@ -9,23 +9,27 @@
 /* Begin PBXBuildFile section */
 		B651766F2760168000E7C790 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651766E2760168000E7C790 /* AppDelegate.swift */; };
 		B65176712760168000E7C790 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65176702760168000E7C790 /* SceneDelegate.swift */; };
-		B65176732760168000E7C790 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65176722760168000E7C790 /* ViewController.swift */; };
+		B65176732760168000E7C790 /* NoteDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65176722760168000E7C790 /* NoteDetailVC.swift */; };
 		B65176762760168000E7C790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65176742760168000E7C790 /* Main.storyboard */; };
 		B65176792760168000E7C790 /* SimplyNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B65176772760168000E7C790 /* SimplyNotes.xcdatamodeld */; };
 		B651767B2760168200E7C790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B651767A2760168200E7C790 /* Assets.xcassets */; };
 		B651767E2760168200E7C790 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B651767C2760168200E7C790 /* LaunchScreen.storyboard */; };
+		B6517686276162DF00E7C790 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6517685276162DF00E7C790 /* NoteCell.swift */; };
+		B6517688276162F600E7C790 /* NoteTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6517687276162F600E7C790 /* NoteTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B651766B2760168000E7C790 /* SimplyNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplyNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B651766E2760168000E7C790 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B65176702760168000E7C790 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B65176722760168000E7C790 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B65176722760168000E7C790 /* NoteDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailVC.swift; sourceTree = "<group>"; };
 		B65176752760168000E7C790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B65176782760168000E7C790 /* SimplyNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimplyNotes.xcdatamodel; sourceTree = "<group>"; };
 		B651767A2760168200E7C790 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B651767D2760168200E7C790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B651767F2760168200E7C790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6517685276162DF00E7C790 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		B6517687276162F600E7C790 /* NoteTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +64,9 @@
 			children = (
 				B651766E2760168000E7C790 /* AppDelegate.swift */,
 				B65176702760168000E7C790 /* SceneDelegate.swift */,
-				B65176722760168000E7C790 /* ViewController.swift */,
+				B65176722760168000E7C790 /* NoteDetailVC.swift */,
+				B6517687276162F600E7C790 /* NoteTableView.swift */,
+				B6517685276162DF00E7C790 /* NoteCell.swift */,
 				B65176742760168000E7C790 /* Main.storyboard */,
 				B651767A2760168200E7C790 /* Assets.xcassets */,
 				B651767C2760168200E7C790 /* LaunchScreen.storyboard */,
@@ -141,8 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B65176732760168000E7C790 /* ViewController.swift in Sources */,
+				B65176732760168000E7C790 /* NoteDetailVC.swift in Sources */,
+				B6517688276162F600E7C790 /* NoteTableView.swift in Sources */,
 				B651766F2760168000E7C790 /* AppDelegate.swift in Sources */,
+				B6517686276162DF00E7C790 /* NoteCell.swift in Sources */,
 				B65176712760168000E7C790 /* SceneDelegate.swift in Sources */,
 				B65176792760168000E7C790 /* SimplyNotes.xcdatamodeld in Sources */,
 			);

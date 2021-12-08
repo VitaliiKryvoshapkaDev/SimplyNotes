@@ -7,13 +7,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NoteDetailVC: UIViewController {
 
+    @IBOutlet weak var titleTF: UITextField!
+    
+    @IBOutlet weak var descriptionTV: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
 
+    @IBAction func saveAction(_ sender: Any) {
+    }
 }
 
