@@ -16,6 +16,7 @@
 		B651767E2760168200E7C790 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B651767C2760168200E7C790 /* LaunchScreen.storyboard */; };
 		B6517686276162DF00E7C790 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6517685276162DF00E7C790 /* NoteCell.swift */; };
 		B6517688276162F600E7C790 /* NoteTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6517687276162F600E7C790 /* NoteTableView.swift */; };
+		B651768A276167A200E7C790 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6517689276167A200E7C790 /* Note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B651767F2760168200E7C790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6517685276162DF00E7C790 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		B6517687276162F600E7C790 /* NoteTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableView.swift; sourceTree = "<group>"; };
+		B6517689276167A200E7C790 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				B65176702760168000E7C790 /* SceneDelegate.swift */,
 				B65176722760168000E7C790 /* NoteDetailVC.swift */,
 				B6517687276162F600E7C790 /* NoteTableView.swift */,
+				B6517689276167A200E7C790 /* Note.swift */,
 				B6517685276162DF00E7C790 /* NoteCell.swift */,
 				B65176742760168000E7C790 /* Main.storyboard */,
 				B651767A2760168200E7C790 /* Assets.xcassets */,
@@ -149,6 +152,7 @@
 			files = (
 				B65176732760168000E7C790 /* NoteDetailVC.swift in Sources */,
 				B6517688276162F600E7C790 /* NoteTableView.swift in Sources */,
+				B651768A276167A200E7C790 /* Note.swift in Sources */,
 				B651766F2760168000E7C790 /* AppDelegate.swift in Sources */,
 				B6517686276162DF00E7C790 /* NoteCell.swift in Sources */,
 				B65176712760168000E7C790 /* SceneDelegate.swift in Sources */,
