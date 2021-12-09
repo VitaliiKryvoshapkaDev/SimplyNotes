@@ -12,7 +12,7 @@ import CoreData
 var noteList = [Note]()
 
 class NoteTableView: UITableViewController{
-
+    
     //LoadData from CD
     var firstLoad = true
     
@@ -53,8 +53,27 @@ class NoteTableView: UITableViewController{
         return noteList.count
     }
     
+    //Reload Data
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
     }
     
+    //Add Edit Screen
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "editNote", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if(segue.identifier == "editNote"){
+            let indexPath = tableView.indexPathForSelectedRow!
+            let noteDetail = segue.destination as? NoteDetailVC
+            let selectedNote : Note!
+            selectedNote = noteList[indexPath.row]
+            noteDetail!.selectedNote = selectedNote
+            
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
 }
+
+

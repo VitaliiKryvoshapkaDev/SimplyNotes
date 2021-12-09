@@ -64,10 +64,13 @@
                     <navigationItem key="navigationItem" title="SimplyNotes" id="faN-t6-Y45">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Zel-hA-WNL">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="aKs-eO-g9I"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="newNote" id="aKs-eO-g9I"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="editNote" id="g0b-QT-IQU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6FJ-5g-O43" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,7 +92,7 @@
             </objects>
             <point key="canvasLocation" x="-1303" y="60"/>
         </scene>
-        <!--Note DetailVC-->
+        <!--Note Details-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="NoteDetailVC" customModule="SimplyNotes" customModuleProvider="target" sceneMemberID="viewController">
@@ -140,7 +143,7 @@
                             <constraint firstItem="Ebk-5Q-bU3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="qXB-uF-5Mu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qdc-W6-wwE">
+                    <navigationItem key="navigationItem" title="Note Details" id="qdc-W6-wwE">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="oHc-UN-hVg">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="qWJ-n8-TJo">
                                 <rect key="frame" x="302" y="5" width="92" height="34.333333333333336"/>
@@ -163,6 +166,9 @@
             <point key="canvasLocation" x="222" y="60"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="g0b-QT-IQU"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
