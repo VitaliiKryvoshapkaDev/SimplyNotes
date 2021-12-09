@@ -12,11 +12,11 @@
 		B65176732760168000E7C790 /* NoteDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65176722760168000E7C790 /* NoteDetailVC.swift */; };
 		B65176762760168000E7C790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65176742760168000E7C790 /* Main.storyboard */; };
 		B65176792760168000E7C790 /* SimplyNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B65176772760168000E7C790 /* SimplyNotes.xcdatamodeld */; };
-		B651767B2760168200E7C790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B651767A2760168200E7C790 /* Assets.xcassets */; };
 		B651767E2760168200E7C790 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B651767C2760168200E7C790 /* LaunchScreen.storyboard */; };
 		B6517686276162DF00E7C790 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6517685276162DF00E7C790 /* NoteCell.swift */; };
 		B6517688276162F600E7C790 /* NoteTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6517687276162F600E7C790 /* NoteTableView.swift */; };
 		B651768A276167A200E7C790 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6517689276167A200E7C790 /* Note.swift */; };
+		B651768B276294CF00E7C790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B651767A2760168200E7C790 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,7 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B651767E2760168200E7C790 /* LaunchScreen.storyboard in Resources */,
-				B651767B2760168200E7C790 /* Assets.xcassets in Resources */,
+				B651768B276294CF00E7C790 /* Assets.xcassets in Resources */,
 				B65176762760168000E7C790 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -155,7 +155,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Note Details" id="qdc-W6-wwE">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="oHc-UN-hVg">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="qWJ-n8-TJo">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="qWJ-n8-TJo">
                                 <rect key="frame" x="302" y="5" width="92" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
