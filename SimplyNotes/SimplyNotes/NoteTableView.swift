@@ -16,6 +16,19 @@ class NoteTableView: UITableViewController{
     //LoadData from CD
     var firstLoad = true
     
+    //Delete from Date
+    func nonDeleteNotes() -> [Note]{
+        var nonDeleteNoteList = [Note]()
+        for note in noteList {
+            if(note.deletedDate == nil){
+                nonDeleteNoteList.append(note)
+            }
+        }
+        
+        return nonDeleteNoteList
+    }
+    
+    
     override func viewDidLoad() {
         if(firstLoad){
             firstLoad = false
@@ -40,7 +53,8 @@ class NoteTableView: UITableViewController{
         let noteCell = tableView.dequeueReusableCell(withIdentifier: "noteCellID", for: indexPath) as! NoteCell
         
         let thisNote: Note!
-        thisNote = noteList[indexPath.row]
+        //insert nonDeleteNotes (instead of noteList)
+        thisNote = nonDeleteNotes()[indexPath.row]
         
         noteCell.titleLabel.text = thisNote.title
         noteCell.descriptionLabel.text = thisNote.desc
@@ -50,7 +64,8 @@ class NoteTableView: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return noteList.count
+        //insert nonDeleteNotes (instead of noteList)
+        return nonDeleteNotes().count
     }
     
     //Reload Data
@@ -68,7 +83,8 @@ class NoteTableView: UITableViewController{
             let indexPath = tableView.indexPathForSelectedRow!
             let noteDetail = segue.destination as? NoteDetailVC
             let selectedNote : Note!
-            selectedNote = noteList[indexPath.row]
+            //Insert nonDeleteNotes (instead of noteList)
+            selectedNote = nonDeleteNotes()[indexPath.row]
             noteDetail!.selectedNote = selectedNote
             
             tableView.deselectRow(at: indexPath, animated: true)
