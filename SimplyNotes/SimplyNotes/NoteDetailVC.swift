@@ -14,6 +14,8 @@ class NoteDetailVC: UIViewController {
     
     @IBOutlet weak var descriptionTV: UITextView!
     
+    @IBOutlet weak var deleteButton: UIButton!
+    
     //For edit selected note
     var selectedNote: Note? = nil
     
@@ -25,6 +27,8 @@ class NoteDetailVC: UIViewController {
             titleTF.text = selectedNote?.title
             descriptionTV.text = selectedNote?.desc
         }
+        
+        deleteButton.shake()
     }
 
 
@@ -99,3 +103,17 @@ class NoteDetailVC: UIViewController {
     }
 }
 
+//Add Shake Delete button
+public extension UIView {
+    
+    func shake(count : Float = 5,for duration : TimeInterval = 0.4,withTranslation translation : Float = 5) {
+        
+        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+        animation.repeatCount = count
+        animation.duration = duration/TimeInterval(animation.repeatCount)
+        animation.autoreverses = true
+        animation.values = [translation, -translation]
+        self.layer.add(animation, forKey: "shake")
+    }
+}

@@ -62,19 +62,98 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="SimplyNotes" id="faN-t6-Y45">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Zel-hA-WNL">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="TmH-7k-Uaa">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="0AA-kb-MaN">
+                                <rect key="frame" x="20" y="5" width="92" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Account">
+                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="RXu-jn-cLr" kind="show" id="LIk-kd-kVU"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="plus.app" catalog="system" style="plain" id="Zel-hA-WNL">
+                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" identifier="newNote" id="aKs-eO-g9I"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="editScreenButton" destination="Zel-hA-WNL" id="Eus-rS-KhT"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="editNote" id="g0b-QT-IQU"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6FJ-5g-O43" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-516" y="60"/>
+            <point key="canvasLocation" x="-28" y="60"/>
+        </scene>
+        <!--Account View Controller-->
+        <scene sceneID="7ps-eI-fGh">
+            <objects>
+                <viewController storyboardIdentifier="AccountVC" id="RXu-jn-cLr" customClass="AccountViewController" customModule="SimplyNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cPv-T6-0EC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hd7-Aq-H6d">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pX5-d9-bWf">
+                                        <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sx2-yb-rg2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hd7-Aq-H6d" firstAttribute="leading" secondItem="sx2-yb-rg2" secondAttribute="leading" id="96V-BI-TM9"/>
+                            <constraint firstItem="hd7-Aq-H6d" firstAttribute="top" secondItem="cPv-T6-0EC" secondAttribute="top" id="GRF-6N-tx9"/>
+                            <constraint firstItem="sx2-yb-rg2" firstAttribute="trailing" secondItem="hd7-Aq-H6d" secondAttribute="trailing" id="HPQ-7A-eH4"/>
+                            <constraint firstAttribute="bottom" secondItem="hd7-Aq-H6d" secondAttribute="bottom" id="Nvq-i7-3N0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5xP-KL-Mgw"/>
+                    <connections>
+                        <outlet property="videoLayer" destination="hd7-Aq-H6d" id="RcG-Oo-Xya"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X4W-oD-PDg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="735" y="-593"/>
+        </scene>
+        <!--MainVC-->
+        <scene sceneID="3e1-4m-PbN">
+            <objects>
+                <viewController id="2vD-9Y-DoE" customClass="MainVC" customModule="SimplyNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hMs-Qb-oBd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAX-x8-MIB">
+                                <rect key="frame" x="42" y="438" width="308" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WgG-hb-0My"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailsLabel" destination="RAX-x8-MIB" id="uoe-xR-33J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tYg-0o-9m7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1486" y="-593"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pBZ-B8-iuU">
@@ -83,6 +162,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jVs-MW-1XP">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="f2x-HU-drO" kind="relationship" relationship="rootViewController" id="Rn0-hz-Hna"/>
@@ -90,7 +170,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0SX-lj-udk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1303" y="60"/>
+            <point key="canvasLocation" x="-768" y="60"/>
         </scene>
         <!--Note Details-->
         <scene sceneID="tne-QT-ifu">
@@ -156,7 +236,7 @@
                     <navigationItem key="navigationItem" title="Note Details" id="qdc-W6-wwE">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="oHc-UN-hVg">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="qWJ-n8-TJo">
-                                <rect key="frame" x="302" y="5" width="92" height="34.333333333333336"/>
+                                <rect key="frame" x="302" y="4.6666666666666679" width="92" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
@@ -167,19 +247,21 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="deleteButton" destination="D5F-F8-IgZ" id="PtL-J0-3RX"/>
                         <outlet property="descriptionTV" destination="pew-rL-hLR" id="C92-ns-IWy"/>
                         <outlet property="titleTF" destination="ii0-db-Roa" id="SfG-B7-rCU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="222" y="60"/>
+            <point key="canvasLocation" x="712" y="60"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="g0b-QT-IQU"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="plus.app" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

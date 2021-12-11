@@ -13,6 +13,8 @@ var noteList = [Note]()
 
 class NoteTableView: UITableViewController{
     
+    @IBOutlet weak var editScreenButton: UIBarButtonItem!
+    
     //LoadData from CD
     var firstLoad = true
     
@@ -90,6 +92,15 @@ class NoteTableView: UITableViewController{
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }
+    
+    
+//    @IBAction func showAccountButton(_ sender: Any) {
+//        let AccVC = self.storyboard?.instantiateViewController(withIdentifier: "AccountVC") as! AccountViewController
+//        self.present(AccVC, animated: true, completion: nil)
+//    }
 }
+
+
+
 
 
