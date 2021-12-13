@@ -13,6 +13,7 @@ var noteList = [Note]()
 
 class NoteTableView: UITableViewController{
     
+    //MARK: - OUTLETS -
     @IBOutlet weak var editScreenButton: UIBarButtonItem!
     
     //LoadData from CD
@@ -26,11 +27,10 @@ class NoteTableView: UITableViewController{
                 nonDeleteNoteList.append(note)
             }
         }
-        
         return nonDeleteNoteList
     }
     
-    
+    //MARK: - LIFECYCLE -
     override func viewDidLoad() {
         if(firstLoad){
             firstLoad = false
@@ -50,35 +50,55 @@ class NoteTableView: UITableViewController{
         }
     }
     
-    //Configure cell
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let noteCell = tableView.dequeueReusableCell(withIdentifier: "noteCellID", for: indexPath) as! NoteCell
-        
-        let thisNote: Note!
-        //insert nonDeleteNotes (instead of noteList)
-        thisNote = nonDeleteNotes()[indexPath.row]
-        
-        noteCell.titleLabel.text = thisNote.title
-        noteCell.descriptionLabel.text = thisNote.desc
-        
-        
-        return noteCell
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //insert nonDeleteNotes (instead of noteList)
-        return nonDeleteNotes().count
-    }
-    
     //Reload Data
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
     }
     
-    //Add Edit Screen
+    //MARK: - CONFIGURE CELL -
+    //Configure cell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let noteCell = tableView.dequeueReusableCell(withIdentifier: "noteCellID", for: indexPath) as! NoteCell
+        
+        let thisNote: Note!
+        //Insert nonDeleteNotes (instead of noteList)
+        thisNote = nonDeleteNotes()[indexPath.row]
+        
+        noteCell.titleLabel.text = thisNote.title
+        noteCell.descriptionLabel.text = thisNote.desc
+        
+        // CORNER RADIUS CELL
+        noteCell.contentView.layer.cornerRadius = 3
+        //NoteCell.contentView.layer.borderColor = UIColor.darkGray
+        noteCell.contentView.layer.borderWidth = 1
+        //NoteCell.backgroundColor = .clear
+        return noteCell
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //Insert nonDeleteNotes (instead of noteList)
+        return nonDeleteNotes().count
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if (editingStyle == .delete) {
+            noteList.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            self.tableView.endUpdates()
+            tableView.reloadData()
+        }
+    }
+    //MARK: - move to edit screen -
+    //Add Edit Screen (Navigate to edit screen)
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "editNote", sender: self)
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if(segue.identifier == "editNote"){
@@ -92,15 +112,5 @@ class NoteTableView: UITableViewController{
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }
-    
-    
-//    @IBAction func showAccountButton(_ sender: Any) {
-//        let AccVC = self.storyboard?.instantiateViewController(withIdentifier: "AccountVC") as! AccountViewController
-//        self.present(AccVC, animated: true, completion: nil)
-//    }
 }
-
-
-
-
 
