@@ -21,7 +21,7 @@
 		B651768E27634BFE00E7C790 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651768D27634BFE00E7C790 /* User.swift */; };
 		B651769027634DBB00E7C790 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651768F27634DBB00E7C790 /* MainVC.swift */; };
 		B651769227634F0E00E7C790 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B651769127634F0E00E7C790 /* ViewController.swift */; };
-		B66DAC7C2766A12500C21932 /* videoBackground.mov in Resources */ = {isa = PBXBuildFile; fileRef = B66DAC7B2766A12500C21932 /* videoBackground.mov */; };
+		B669E820285126F8001D93D6 /* videoBackground.mov in Resources */ = {isa = PBXBuildFile; fileRef = B669E81F285126F8001D93D6 /* videoBackground.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,7 @@
 		B651768D27634BFE00E7C790 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B651768F27634DBB00E7C790 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		B651769127634F0E00E7C790 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B66DAC7B2766A12500C21932 /* videoBackground.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = videoBackground.mov; path = ../../../../../Resouces/videoBackground.mov; sourceTree = "<group>"; };
+		B669E81F285126F8001D93D6 /* videoBackground.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = videoBackground.mov; sourceTree = "<group>"; };
 		D3DC629DEB6AFC7B83F14DED /* Pods_SimplyNotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimplyNotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E13587B69DE7E432BF3FAEE9 /* Pods-SimplyNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimplyNotes.release.xcconfig"; path = "Target Support Files/Pods-SimplyNotes/Pods-SimplyNotes.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,7 +101,7 @@
 				B651768D27634BFE00E7C790 /* User.swift */,
 				B651768F27634DBB00E7C790 /* MainVC.swift */,
 				B651769127634F0E00E7C790 /* ViewController.swift */,
-				B66DAC7B2766A12500C21932 /* videoBackground.mov */,
+				B669E81F285126F8001D93D6 /* videoBackground.mov */,
 			);
 			path = "FaceBook,Apple login";
 			sourceTree = "<group>";
@@ -185,7 +185,7 @@
 			files = (
 				B651767E2760168200E7C790 /* LaunchScreen.storyboard in Resources */,
 				B651768B276294CF00E7C790 /* Assets.xcassets in Resources */,
-				B66DAC7C2766A12500C21932 /* videoBackground.mov in Resources */,
+				B669E820285126F8001D93D6 /* videoBackground.mov in Resources */,
 				B65176762760168000E7C790 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
