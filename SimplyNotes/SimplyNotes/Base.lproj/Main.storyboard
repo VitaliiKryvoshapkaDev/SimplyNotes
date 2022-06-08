@@ -128,8 +128,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Sign in" id="5xP-KL-Mgw">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="QHo-dc-gP7">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="sNT-RF-oPh">
-                                <rect key="frame" x="161.33333333333334" y="835" width="91.666666666666657" height="31"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="sNT-RF-oPh">
+                                <rect key="frame" x="289" y="5" width="105" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
