@@ -11,6 +11,18 @@ import AVFoundation
 
 class AccountViewController: UIViewController {
     
+    //Link button to my GitHub
+    @IBAction func linkClicked(sender: AnyObject) {
+        openUrl(urlStr: "https://github.com/VitaliiKryvoshapkaDev/SimplyNotes")
+    }
+    
+    func openUrl(urlStr:String!) {
+        
+        if let url = NSURL(string:urlStr) {
+            UIApplication.shared.openURL(url as URL)
+        }
+    }
+    
     @IBOutlet weak var videoLayer: UIView!
     
     override func viewDidLoad() {
